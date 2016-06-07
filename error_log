@@ -1,0 +1,11 @@
+[02-Jun-2016 08:54:30 Etc/GMT] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/planetgr/public_html/demo/application/controllers/Admin.php on line 53
+[02-Jun-2016 10:24:25 Etc/GMT] PHP Fatal error:  Call to a member function check_admin() on a non-object in /home/planetgr/public_html/demo/application/controllers/Admin.php on line 113
+[02-Jun-2016 10:24:27 Etc/GMT] PHP Fatal error:  Call to a member function check_admin() on a non-object in /home/planetgr/public_html/demo/application/controllers/Admin.php on line 113
+[02-Jun-2016 10:33:30 Etc/GMT] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 93
+[02-Jun-2016 10:34:19 Etc/GMT] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 93
+[02-Jun-2016 10:34:46 Etc/GMT] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 93
+[02-Jun-2016 10:35:22 Etc/GMT] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 93
+[02-Jun-2016 10:36:33 Etc/GMT] PHP Parse error:  syntax error, unexpected 'name' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 93
+[02-Jun-2016 10:37:01 Etc/GMT] PHP Parse error:  syntax error, unexpected 'username' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 93
+[02-Jun-2016 10:37:42 Etc/GMT] PHP Parse error:  syntax error, unexpected 'username' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 94
+[02-Jun-2016 10:37:45 Etc/GMT] PHP Parse error:  syntax error, unexpected 'username' (T_STRING) in /home/planetgr/public_html/demo/application/views/admin/dashboard.php on line 94

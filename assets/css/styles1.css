@@ -1,0 +1,68 @@
+/*CSS Code by Deepak Gupta deepak10november@gmail.com*/
+
+/* set all the styles to 0 */
+html, body, table, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, a{ 
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+/* Firefox will always display a scroll bar */
+html{
+	min-height: 100%;
+	margin-bottom: 1px;
+}
+
+html, body{
+	height:100%;
+}
+ img, div, input { 
+ behavior: url("iepngfix.htc") 
+ }
+:focus {outline:0px;}
+
+body{
+	font-family:verdana;
+	font-size:11px;
+	color:#000;
+	text-decoration:none;
+	text-align:center;
+	margin:0px;
+	padding:0px;
+	background-color: #FFFFFF;
+}
+a{
+	cursor: pointer;
+	outline:none;
+}
+img{
+	border:0px;
+	outline:none;
+}
+p{
+	padding:3px 0px;
+	margin:0px;
+}
+h1{
+	font-family:arial,verdana;
+	font-size:11px;
+	color:#000;
+	text-decoration:none;
+	margin:0px;
+	padding:0px;
+}
+
+.container{
+	margin:0px auto;
+	padding:0px;
+	height:auto;
+	text-align:left;
+	width:778px;
+}
+
+.master{
+	margin:0px;
+	padding:0px;
+	height:auto;
+	width:778px;
+	float:left;
+}	
