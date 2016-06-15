@@ -213,9 +213,9 @@
                                   ?>
                                   <!--  <button disabled class="btn btn-success btn-xs" ><i class="fa fa-check"></i>
                                       </button> -->
-                                      <button class="btn btn-primary btn-xs" data-toggle="modal" href="#customerinfo" ><i class="fa fa-pencil"></i>
+                                      <button class="btn btn-primary btn-xs" data-toggle="modal" id="edit" ><i class="fa fa-pencil"></i>
                                       </button>
-                                      <button class="btn btn-danger btn-xs" data-toggle="modal" href="#customerdelete"><i class="fa fa-trash-o "></i></button>
+                                      <button class="btn btn-danger btn-xs" data-toggle="modal"  href="#customerdelete"><i class="fa fa-trash-o "></i></button>
                                
                                
                                    <?php 
@@ -248,43 +248,72 @@
                               <div class="modal-content">
                                   <div class="modal-header">
                                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                      <h4 class="modal-title">Customer Name</h4>
+                                    
                                   </div>
                                   <div class="modal-body">
                                       <p><strong>Customer Details</strong></p>
-                                     <?php 
-                                     foreach($user_data as $data)
-                                     {
+                                        <table class="table table-striped table-advance table-hover">
+                             <?php 
+                                foreach($user_data as $data)
+                                  {     $id= $data['id'];
                                         $name = $data['name'];
                                         $plan = $data['plan']; 
                                         $email= $data['email'];
                                         $phone= $data['phone'];
-                                        $address = $data['adderss'];
+                                        $address = $data['address'];
                                         $city = $data['city'];
                                         $pincode= $data['pincode'];
-                                        $country= $data['country']; 
+                                        $country= $data['country']; }
                                     
-                                        
-                                     } 
-                                     ?>
-                                      <p>Name: <?php echo $name;?></p>
-                                      <p>Plan selected: <?php echo $plan;?></p>
-                                      <p>E-mail: <?php echo $email;?></p>
-                                      <p>Phone: <?php echo $phone;?></p>
-                                      <p>Address:<?php echo $address;?></p>
-                                      <p>City :<?php echo $city;?></p>
-                                      <p>Pincode: <?php echo $pincode;?></p>
-                                      <p>Country:<?php echo $country;?></p>
-                                     
-                                          
-                                  </div>
+                                    ?>
+                              <thead>
+                              <tr>
+                                  <th>Id</th>
+                                  <td class="hidden-phone"><?php echo $id; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Name</th>
+                                  <td class="hidden-phone"><?php echo $name; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Plan</th>
+                                  <td class="hidden-phone"><?php echo $plan; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Email</th>
+                                  <td class="hidden-phone"><?php echo $email; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Phone</th>
+                                  <td class="hidden-phone"><?php echo $phone; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Address</th>
+                                  <td class="hidden-phone"><?php echo $address; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>City</th>
+                                  <td class="hidden-phone"><?php echo $city; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Pincode</th>
+                                  <td class="hidden-phone"><?php echo $pincode; ?></td>
+                              </tr>
+                               <tr>
+                                  <th>Country</th>
+                                  <td class="hidden-phone"><?php echo $country; ?></td>
+                              </tr>
+                              </thead>
+                                  
+                                        </table>
                                   <div class="modal-footer">
-                                      <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                                      <button data-dismiss="modal" class="btn btn-default" type="button" >Cancel</button>
                                   </div>
                               </div>
                           </div>
                       </div>
-
+                      </div>
+                     
 
                       <div aria-hidden="true" aria-labelledby="customerdeleteLabel" role="dialog" tabindex="-1" id="customerdelete" class="modal fade">
                           <div class="modal-dialog">
@@ -298,7 +327,9 @@
             
                                   </div>
                                   <div class="modal-footer">
-                                      <button data-dismiss="modal" class="btn btn-default" type="button">Delete</button>
+                                      <a href="admin/all-" >Delete</a>
+                                     
+
                                   </div>
                               </div>
                           </div>
@@ -379,7 +410,26 @@
             var to = $("#" + id).data("to");
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
-    </script>
+        function  getId(element) {
+    
+             alert("Do YOu really want to delete the user ?????");
+             if(element.parentNode.cellIndex == 6){
+             var row = document.getElementById(element.parentNode.parentNode.rowIndex);
+              row.parentNode.removeChild(row);
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+          $(document).ready(function(){
+          $(#edit).click(function(){
+          $.get("dashboard/viewuser", function($id){
+            alert("ID: " + $id);
+        });
+    });
+});
+           
+       
+      }
+       }
+       
+   </script>
   
 
   </body>

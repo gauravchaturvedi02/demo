@@ -23,13 +23,12 @@ $page_name = uri_string();
       <div class="logomain">
         <div class="logo"><a href="<?php echo base_url(); ?>"><img src="assets/images/logo.png" alt="Planet Green Bikes" title="Planet Green Bikes" /></a></div>
           <ul id="navmenu-h">
-          <li><a href="<?php echo base_url(); ?>howitworks">How it works</a></li>
-          <?php $session_data = $this->session->userdata('users'); 
+           <?php $session_data = $this->session->userdata('users'); 
                  $username = $session_data['name'];
                  if(!empty($username)){
                   ?>
               <li><a href="<?php echo base_url(); ?>#">Hello, <?php echo $username; ?></a></li>
-              <li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+               <li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
               <?php
                  }
               else{
@@ -40,6 +39,8 @@ $page_name = uri_string();
             <?php
               }
              ?>
+               <li><a href="<?php echo base_url(); ?>howitworks">How it works</a></li>
+             
                   
         </ul>
       </div>
@@ -57,12 +58,7 @@ $page_name = uri_string();
   <div class="container">
     <div class="master">
       <h2>Contact Us</h2>
-      <p><span class="heading">Planet Green Bikes</span></p>
-      <p>G-11, 2nd Floor</p>
-<p>Hauz Khas</p>
-<p>New Delhi - 110016</p>
-<p>Phone: 011 26853333/9999</p>
-<p>Email: <a href="mailto:info@planetgreenbikes.in">info@planetgreenbikes.in</a></p>
+      
     </div>
   </div>
 </div>

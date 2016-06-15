@@ -417,9 +417,9 @@
           <div class="column1">
             <input onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" type="text" class="time form-control" value="" name="time" placeholder="Please indicate approximate pickup time in NOTE section" />
           </div>
-          <div class="column1"><a href="#">Privacy Policy</a> <span>|</span> <a href="#">Terms &amp; Conditions</a><br />
+          <div class="column2"><a href="#">Privacy Policy</a> <span>|</span> <a href="#">Terms &amp; Conditions</a><br />
             <input type="checkbox" class="form-control terms " name="termsaccepts" data-container="body" data-toggle="popover" data-placement="top" data-content="Please Accept our Terms& Conditions"/> I have read and agreed to the Terms of Service.<br />
-            <button type="submit" name="submit" class="continue save_button" id="save_button" value="Continue" />Continue</button>
+            <button type="submit" name="submit" class="continue save_button" id="save_button" value="Continue" />Save</button>
           </div>
     
         <?php echo form_close();?>
@@ -452,7 +452,7 @@
         <div class="column2">
           <input onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" type="text" name="code" value="Validation code" />
         </div>
-        <div class="column1">
+        <div class="column2">
           <input type="checkbox" />
           I agree to the Terms
           <input type="button" class="continue" value="Confirm" />

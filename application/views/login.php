@@ -30,7 +30,7 @@ $page_name = uri_string();
                  if(!empty($username)){
                   ?>
               <li><a href="<?php echo base_url(); ?>#">Hello, <?php echo $username; ?></a></li>
-              <li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+               <li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
               <?php
                  }
               else{
@@ -41,7 +41,8 @@ $page_name = uri_string();
             <?php
               }
              ?>
-                  
+               <li><a href="<?php echo base_url(); ?>howitworks">How it works</a></li>
+             
         </ul>
       </div>
       <div class="formVertical">

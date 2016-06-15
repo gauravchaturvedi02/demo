@@ -119,7 +119,7 @@
                       </a>
                       <ul class="sub">
                           <li><a href="<?php echo base_url(); ?>dashboard/allusers">All Users</a></li>
-                          <li><a href="buttons.html">Add New</a></li>
+                          <li><a href="<?php echo base_url(); ?>dashboard/addnew">Add New</a></li>
                       </ul>
                   </li>
 

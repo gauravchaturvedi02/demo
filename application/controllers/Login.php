@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 		     if($session_data['logged_in'] == 1){
 		         //users already logged in
 				  $data['email'] = $session_data['email'];
-				  redirect('','refresh');
+				  redirect('myaccount/userinfo');
 				 
 	            }
 	         else if($this->input->post('submit'))
@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 								 //update last login detail into table..
 	 							$id = $check_login['id'];
 	 							$this->session->set_flashdata('success', "Logged in Successfully");
-	 							redirect('','refresh');
+	 							redirect('myaccount/userinfo');
 
 								
 	 					 }

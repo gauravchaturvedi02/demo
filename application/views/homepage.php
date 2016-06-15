@@ -35,7 +35,7 @@ $page_name = uri_string();
         <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="Planet Green Bikes" title="Planet Green Bikes" /></a></div>
         
         <ul id="navmenu-h">
-          <li><a href="<?php echo base_url(); ?>howitworks">How it works</a></li>
+         
           <?php $session_data = $this->session->userdata('users'); 
                  $username = $session_data['name'];
                  if(!empty($username)){
@@ -52,6 +52,7 @@ $page_name = uri_string();
             <?php
               }
              ?>
+               <li><a href="<?php echo base_url(); ?>howitworks">How it works</a></li>
                   
         </ul>
       </div>

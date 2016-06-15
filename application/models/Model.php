@@ -167,5 +167,23 @@ function check_login($email,$password,$table)
     return $sql->result();
 
   }
+  function getuser($email)
+  { $this->db->where('email',$email);
+        $query = $this->db->get('users');
+    return $query->result();
+
+  }
+  function getuserrow($id){
+      $this->db->where('id',$id);
+      $query=$this->db->get('users');
+      return $query->row;
+  }
+        
+  function deleteuser($id){
+      $this->load->db();
+      $this->db->where('id',$id);
+      $this->db->delete();
+      return true;
+  }           
 
 }

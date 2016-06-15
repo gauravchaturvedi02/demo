@@ -49,9 +49,30 @@ class Dashboard extends CI_Controller {
     $this->load->view('admin/all-users',$data);
   }
 
-  public function addnew(){
+  public function addnew(){  
     $this->load->model('model');
-    $this->load->view('admin/add-new');
+    $this->load->view('admin/add-new',$data);
+    
   }
-		     
-	}
+  public function edit($id){
+      $this->load->model('model');
+      
+      $data['user']=$this->model->getuserrow($id);
+      $this->load->view('admin/customerinfo',$data);
+      
+}
+public function delete($id){
+    $user_id = "POST['id']";
+echo '$user_id';
+ $this->load->model('model');
+$query= $this->model->remove_item($userid);
+redirect('dashboard/all-users',refresh);
+}
+public function viewuser($id){
+$user_id = "POST['id']";
+echo '$user_id';
+$this->load->model('model');
+$query= $this->model->getuserrow($user_id);
+$this->load->view('admin/customerinfo');
+}
+}

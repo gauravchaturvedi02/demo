@@ -33,7 +33,8 @@
             <li><a href="<?php echo base_url(); ?>rules">Rules &amp; Regulations</a>  |</li>  
             <li><a href="<?php echo base_url(); ?>faq">FAQs</a>  |</li>  
             <li><a href="<?php echo base_url(); ?>press">Press Release</a>  |</li>  
-            <li><a href="<?php echo base_url(); ?>contactus">Contact Us</a></li>
+            <li><a href="<?php echo base_url(); ?>contactus">Contact Us</a>  |</li>
+            <li><a href="<?php echo base_url(); ?>feedback">Feedback</a></li>
         </ul>
         <div class="copyright">Copyright &copy; 2010 Green Bike</div>
     </div>

@@ -25,13 +25,12 @@ $page_name = uri_string();
       <div class="logomain">
         <div class="logo"><a href="<?php echo base_url(); ?>"><img src="assets/images/logo.png" alt="Planet Green Bikes" title="Planet Green Bikes" /></a></div>
           <ul id="navmenu-h">
-          <li><a href="<?php echo base_url(); ?>howitworks">How it works</a></li>
           <?php $session_data = $this->session->userdata('users'); 
                  $username = $session_data['name'];
                  if(!empty($username)){
                   ?>
               <li><a href="<?php echo base_url(); ?>#">Hello, <?php echo $username; ?></a></li>
-              <li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
+               <li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
               <?php
                  }
               else{
@@ -42,6 +41,8 @@ $page_name = uri_string();
             <?php
               }
              ?>
+               <li><a href="<?php echo base_url();?>howitworks">How it works</a></li>
+              
                   
         </ul>
       </div>
@@ -398,10 +399,9 @@ $page_name = uri_string();
     </div>
   </div>
 </div>
-<script type="text/javascript">
+    <script type="text/javascript">
 
 $(document).ready(function() {
-$('[data-toggle="tooltip"]').tooltip()
 
   $(".only_number").keypress(function(e){
     //if the letter is not digit then display error and don't type anything
@@ -409,7 +409,7 @@ $('[data-toggle="tooltip"]').tooltip()
       return false;
     }
   });
-
+   
 
   function isValidEmailAddress(emailAddress) 
   {
@@ -442,75 +442,48 @@ $('[data-toggle="tooltip"]').tooltip()
     }
   });
    var flag = '';
-  $("#save_button").click(function() {
+   if($(".name").val()== ""){
+            flag=0;
+            return false;
+        }
+        else if($(".email").val()== ""){
+            flag=0;
+            return false;
+        }
+        else if($(".phone").val() == ""){
+            flag=0;
+            return false;
+        }
+         else if($(".address").val() == ""){
+            flag=0;
+            return false;
+        }
+         else if($(".password").val() == ""){
+            flag=0;
+            return false;
+        }
+         else if($(".city").val() == ""){
+            flag=0;
+            return false;
+        }
+         else if($(".pin").val() == ""){
+            flag=0;
+            return false;
+        }
+         else if(!isNotValidEmail($(".phone").val())){
+            flag=0;
+            return false;
+        }
 
-    flag = 1;
-    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   
-    if( $(".name").val() == "" )
-    {   
-      
-      $(".name").parent().addClass('has-error');
-      $(".name").focus();
-      $(".name").popover('show');
-      flag = 0;
-      return false;
-    }
-   else if( $(".email").val() == "" )
-    {    
-      $(".email").parent().addClass('has-error');
-      $(".email").focus();
-      $(".email").popover('show');
+            
 
-      if(!isValidEmailAddress($(".email").val()))
-       {    
-         $('.email').popover('show');
-       }
-      flag = 0;
-      return false;
-    }
-     else if( $(".phone").val() == "" )
-    {    
-      $(".phone").parent().addClass('has-error');
-      $(".phone").focus();
-      $(".phone").popover('show');
-      flag = 0;
-      return false;
-    }
-     else if( $(".pin").val() == "" )
-    {   
-      
-      $(".pin").parent().addClass('has-error');
-      $(".pin").focus();
-      $(".pin").popover('show');
-       flag = 0;
-      return false;
-    }
-    else if( $(".password").val() == "" )
-    {   
-      
-      $(".password").parent().addClass('has-error');
-      $(".password").focus();
-      $(".password").popover('show');
-      flag = 0;
-      return false;
-    }
-   else if($(".terms"). prop("checked") == false){
-     $(".terms").parent().addClass('has-error');
-      $(".terms").focus();
-      $(".terms").popover('show');
-       flag = 0;
-      return false;
-    }
+   function isValidEmailAddress(emailAddress) 
+  {
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+      return pattern.test(emailAddress);
   
-  });
-
-  if( flag == 1 )
-    {
-      $(this).removeAttr('id');
-      $("#registration_form").submit();     
-
-    }
+  } 
 });
 
 </script>
+  
